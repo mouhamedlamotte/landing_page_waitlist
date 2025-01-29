@@ -5,7 +5,6 @@ import {
   ButtonGroup,
   Container,
   Flex,
-  HStack,
   Heading,
   Icon,
   IconButton,
@@ -16,23 +15,15 @@ import {
   Wrap,
   useClipboard,
 } from '@chakra-ui/react'
-import { Br, Link } from '@saas-ui/react'
+import { Br } from '@saas-ui/react'
 import type { Metadata, NextPage } from 'next'
 import Image from 'next/image'
 import {
   FiArrowRight,
-  FiBox,
   FiCheck,
-  FiCode,
   FiCopy,
-  FiFile,
   FiFileText,
-  FiFlag,
-  FiFolderMinus,
-  FiGrid,
-  FiHelpCircle,
   FiLink,
-  FiLock,
   FiMessageCircle,
   FiUserPlus,
   FiUsers,
@@ -50,24 +41,16 @@ import {
   HighlightsItem,
   HighlightsTestimonialItem,
 } from '#components/highlights'
-import { ChakraLogo, NextjsLogo } from '#components/logos'
 import { FallInPlace } from '#components/motion/fall-in-place'
 import { Pricing } from '#components/pricing/pricing'
 import { Testimonial, Testimonials } from '#components/testimonials'
 import { Em } from '#components/typography'
 import faq from '#data/faq'
 import pricing from '#data/pricing'
-import testimonials from '#data/testimonials'
-import { AiOutlinePayCircle } from 'react-icons/ai'
 import { FaBolt, FaChartLine, FaFileInvoice, FaGlobe, FaLock, FaTicketAlt } from 'react-icons/fa'
 import { Waitlist } from '#components/waitlist/waitlist'
 import waitlist from '#data/waitlist'
 import teams from '#data/teams'
-
-export const meta: Metadata = {
-  title: 'Saas UI Landingspage',
-  description: 'Free SaaS landingspage starter kit',
-}
 
 const Home: NextPage = () => {
   return (

@@ -26,10 +26,10 @@ const siteConfig = {
         id: 'team',
         label: 'Team',
       },
-      // {
-      //   label: 'Demo',
-      //   href: '#',
-      // },
+      {
+        label: 'Demo',
+        href: '#',
+      },
       {
         label: 'Rejoindre la waitlist 🚀',
         id : 'waitlist',
