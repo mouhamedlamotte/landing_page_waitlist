@@ -99,7 +99,7 @@ const HeroSection: React.FC = () => {
           >
             <FallInPlace delay={0.8}>
               <ButtonGroup spacing={4} alignItems="center" mt={8}>
-                <ButtonLink colorScheme="primary" size="lg" href="/signup">
+                <ButtonLink colorScheme="primary" size="lg" href="#waitlist">
                 Rejoindre la waitlist 🚀
                 </ButtonLink>
                 <ButtonLink
