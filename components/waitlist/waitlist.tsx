@@ -30,18 +30,34 @@ const WaitlistForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call (Replace with your actual API request)
-    setTimeout(() => {
-        toast({
-            title: '🙌 Merci !',
-            description: 'Vous êtes désormais sur la liste d\'attente. Préparez-vous à découvrir une expérience unique avec NexCom ! 🚀',
-            status: 'success',
-            duration: 5000,
-            isClosable: true,
-          });
+    try {
+      
+      const response = await fetch('https://portfolio.mouhamedlamotte.tech/api/nexcom/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+      if (!response.ok) {
+        setLoading(false);
+        setEmail('');
+        return;
+      }
+          toast({
+              title: '🙌 Merci !',
+              description: 'Vous êtes désormais sur la liste d\'attente. Préparez-vous à découvrir une expérience unique avec NexCom ! 🚀',
+              status: 'success',
+              duration: 5000,
+              isClosable: true,
+            });
+        setLoading(false);
+        setEmail('');
+    } catch (error) {
+      console.error(error);
       setLoading(false);
       setEmail('');
-    }, 1500);
+    }
   };
 
   return (
