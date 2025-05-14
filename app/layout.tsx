@@ -3,10 +3,9 @@ import { ColorModeScript, theme } from '@chakra-ui/react'
 import { Provider } from './provider'
 
 export default function Layout(props: { children: React.ReactNode }) {
-  const colorMode = theme.config.initialColorMode
 
   return (
-    <html lang="en" data-theme={colorMode} style={{ colorScheme: colorMode }}>
+    <html lang="en" data-theme="dark" style={{ colorScheme: "dark" }}>
       <head>
         <link
           rel="apple-touch-icon"
@@ -27,8 +26,8 @@ export default function Layout(props: { children: React.ReactNode }) {
         />
         <link rel="manifest" href="/static/favicons/manifest.json" />
       </head>
-      <body className={`chakra-ui-${colorMode}`}>
-        <ColorModeScript initialColorMode={colorMode} />
+      <body className={`chakra-ui-dark`}>
+        <ColorModeScript initialColorMode="dark" />
         <Provider>{props.children}</Provider>
       </body>
     </html>

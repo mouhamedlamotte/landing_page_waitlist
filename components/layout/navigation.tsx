@@ -10,7 +10,6 @@ import { MobileNavContent } from '#components/mobile-nav'
 import { NavLink } from '#components/nav-link'
 import siteConfig from '#data/config'
 
-import ThemeToggle from './theme-toggle'
 
 const Navigation: React.FC = () => {
   const mobileNav = useDisclosure()
@@ -52,7 +51,6 @@ const Navigation: React.FC = () => {
         )
       })}
 
-      <ThemeToggle />
 
       <MobileNavButton
         ref={mobileNavBtnRef}

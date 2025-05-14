@@ -102,25 +102,6 @@ const HeroSection: React.FC = () => {
                 <ButtonLink colorScheme="primary" size="lg" href="#waitlist">
                 Rejoindre la waitlist 🚀
                 </ButtonLink>
-                <ButtonLink
-                  size="lg"
-                  href="#"
-                  variant="outline"
-                  rightIcon={
-                    <Icon
-                      as={FiArrowRight}
-                      sx={{
-                        transitionProperty: 'common',
-                        transitionDuration: 'normal',
-                        '.chakra-button:hover &': {
-                          transform: 'translate(5px)',
-                        },
-                      }}
-                    />
-                  }
-                >
-                  Voir la demo
-                </ButtonLink>
               </ButtonGroup>
             </FallInPlace>
           </Hero>
@@ -207,6 +188,7 @@ const HighlightsSection = () => {
           </Text>
       <Flex
         gap={2}
+        flexDirection={{ base: 'column', md: 'row' }}
       >
           <Flex
             rounded="full"
